@@ -1,3 +1,64 @@
+# программа, которая сортирует символы в строке согласно следующим правилам:
+# все отсортированные строчные буквы стоят перед заглавными буквами
+# все отсортированные заглавные буквы стоят перед цифрами
+# все отсортированные нечетные цифры стоят перед отсортированными четными
+# v1:
+# def sort_trash(string: str):
+#     l = list(string)
+#     l.sort()
+#     little_alph = [i for i in l if i.isalpha() and i == i.lower()]
+#     big_alph = [i for i in l if i.isalpha() and i == i.upper()]
+#     odd_numb = [i for i in l if i.isdigit() and int(i) % 2 != 0]
+#     even_numb = [i for i in l if i.isdigit() and int(i) % 2 == 0]
+#     res = little_alph + big_alph + odd_numb + even_numb
+#     return ''.join(res)
+#
+#
+# s = input()
+# print(sort_trash(s))
+
+# v2:
+# def comparator(char):
+#     if char.isalpha():
+#         return 0, char.isupper(), char
+#     digit = int(char)
+#     return 1, digit % 2 == 0, digit
+#
+# string = input()
+#
+# print(''.join(sorted(string, key=comparator)))
+
+
+
+# Функция должна объединять элементы переданных последовательностей в кортежи, аналогично функции zip(), и возвращать в
+# виде списка, но если последовательности имеют различную длину, недостающие элементы последовательностей меньшей длины должны принимать значение fill
+# def zip_longest(*args, fill=None):
+#     max_len = max(map(len, args))
+#     lst = [i + [fill] * (max_len - len(i)) for i in args]
+#     return list(zip(*lst))
+#
+#
+# print(zip_longest([1, 2, 3, 4, 5], ['a', 'b', 'c'], fill='_'))
+
+
+
+# Нужно чтобы он определил, какую прибыль принес каждый мультфильм, и вывел названия мультфильмов, указав для каждого соответствующую прибыль
+# names = ['Moana', 'Cars', 'Zootopia', 'Ratatouille', 'Coco', 'Inside Out', 'Finding Nemo', 'Frozen']
+# budgets = [150000000, 120000000, 150000000, 150000000, 180000000, 175000000, 94000000, 150000000]
+# box_offices = [643331111, 462216280, 1023784195, 620702951, 807082196, 857611174, 940335536, 1280802282]
+#
+# for name, budgets, box_offices in sorted(zip(names, budgets, box_offices)):
+#     print(f'{name}: {box_offices - budgets}$')
+
+
+
+# Функция должна возвращать сумму, состоящую из цифр числа, возведенных в степень их порядкового номера. 1^1 + 3^2 + 9^3 = 739
+# def my_pow(number):
+#     return sum(int(c )* *i for i, c in enumerate(str(number) ,1))
+#
+#
+# print(my_pow(139))
+
 
 
 # Доступен список numbers. Он должен вывести индекс максимального элемента в этом списке.
