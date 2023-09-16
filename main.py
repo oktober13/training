@@ -1,3 +1,21 @@
+# Функция должна возвращать словарь, ключом в котором является хеш-значение объекта из списка objects, а значением — сам объект. Если хеш-значения некоторых объектов совпадают, их следует объединить в список.
+# def hash_as_key(objects):
+#     d = {}
+#     for i in objects:
+#         if hash(i) in d:
+#             if isinstance(d[hash(i)], list):
+#                 d[hash(i)].append(i)
+#             else:
+#                 d[hash(i)] = [d[hash(i)], i]
+#         else:
+#             d[hash(i)] = i
+#     return d
+#
+# data = [1, 2, 3, 4, 5, 5]
+#
+# print(hash_as_key(data))
+
+
 # Функция callable() принимает в качестве аргумента некоторый объект и возвращает True, если переданный объект является вызываемым, или False в противном случае.
 # print(callable(int))
 # print(callable(100))
