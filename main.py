@@ -1,3 +1,31 @@
+
+
+
+# Функция eval() выполняет строку-выражение, переданную ей в качестве обязательного аргумента, и возвращает результат выполнения этой строки.
+# С помощью функции eval() можно парсить объекты, то есть преобразовывать из строки в реальные Python объекты.
+# expression = '7 + 10.1'
+#
+# result = eval(expression)
+# print(type(result))
+# print(result)
+#
+# expression1 = "print('Привет из функции eval()')"
+# expression2 = "len([1, 1, 1, 1, 1])"
+#
+# result1 = eval(expression1)
+# result2 = eval(expression2)
+#
+# print(result1)
+# print(result2)
+#
+# list_data = eval("['Python', 'C#', 'Java']")
+# tuple_data = eval('(1, 2, 3, 4, 5)')
+# dict_data = eval("{1: 'January', 2: 'February'}")
+#
+# print(type(list_data), len(list_data))
+# print(type(tuple_data), max(tuple_data))
+# print(type(dict_data), dict_data[2])
+
 # Функция должна возвращать словарь, ключом в котором является хеш-значение объекта из списка objects, а значением — сам объект. Если хеш-значения некоторых объектов совпадают, их следует объединить в список.
 # def hash_as_key(objects):
 #     d = {}
