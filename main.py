@@ -1,13 +1,23 @@
 
 
+# мы можем использовать методы как обычные функции. Для этого нужно указать название типа, затем точку и название метода: type.method
+# text = 'hello'
+# numbers = [1, 2, 3]
+#
+# text_upper = str.upper(text)
+# list.append(numbers, 4)
+#
+# print(text_upper)
+# print(numbers)
 
 
-# функция Фибоначчи при помощи анонимной функции
+# последовательность Фибоначчи при помощи обычной функции
 # def fib(n):
 #     if n < 3:
 #         return 1
 #     else:
 #         return fib(n - 1) + fib(n - 2)
+# последовательность Фибоначчи при помощи анонимной функции
 # fib = lambda x: 1 if x < 3 else fib(x - 1) + fib(x - 2)
 #
 # print(fib(2))
