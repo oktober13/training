@@ -1,3 +1,148 @@
+# import functools
+#
+# def trace(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         f = func(*args, **kwargs)
+#         print(f'TRACE: вызов {func.__name__}() с аргументами: {args}, {kwargs}')
+#         print(f'TRACE: возвращаемое значение {func.__name__}(): {repr(f)}')
+#         return f
+#     return wrapper
+#
+#
+# @trace
+# def sub(a, b, c):
+#     '''прекрасная функция'''
+#     return a - b + c
+#
+#
+# print(sub.__name__)
+# print(sub.__doc__)
+# sub(20, 5, c=10)
+
+
+# import functools
+#
+#
+# def returns_string(func):
+#     @functools.wraps(func)
+#     def revisor(*args, **kwargs):
+#         val = func(*args, **kwargs)
+#         if type(val) == str:
+#             return val
+#         else:
+#             raise TypeError
+#     return revisor
+
+
+# import functools
+#
+# def square(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         f = func(*args, **kwargs)
+#         return f ** 2
+#     return wrapper
+#
+# @square
+# def add(a, b):
+#     return a + b
+#
+# print(add(3, 7))
+
+
+# import functools
+# import time
+#
+#
+# def slow_down(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         time.sleep(1)
+#         return func(*args, **kwargs)
+#
+#     return wrapper
+#
+#
+# @slow_down
+# def countdown(number):
+#     if number < 1:
+#         print('Конец!')
+#     else:
+#         print(number)
+#         countdown(number - 1)
+#
+#
+# countdown(5)
+
+
+# import functools
+#
+# def counter(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         wrapper.num += 1
+#         print(f'Вызов {func.__name__}: {wrapper.num}')
+#         val = func(*args, **kwargs)
+#         return val
+#     wrapper.num = 0
+#     return wrapper
+#
+# @counter
+# def greet(name):
+#     return f'Hello {name}!'
+#
+# print(greet('Timur'))
+# print(greet('Ruslan'))
+# print(greet('Arthur'))
+# print(greet('Gvido'))
+
+
+# import functools, time
+#
+# def timer(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         start = time.perf_counter()
+#         val = func(*args, **kwargs)
+#         end = time.perf_counter()
+#         work_time = end - start
+#         print(f'Время выполнения {func.__name__}: {round(work_time, 4)} сек.')
+#         return val
+#     return wrapper
+#
+# @timer
+# def test(n):
+#     return sum([(i/99)**2 for i in range(n)])
+#
+# @timer
+# def sleep(n):
+#     time.sleep(n)
+#
+# res1 = test(10000)
+# res2 = sleep(4)
+#
+# print(f'Результат функции test = {res1}')
+# print(f'Результат функции sleep = {res2}')
+
+
+# import functools
+#
+# def bold(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         return '<b>' + func(*args, **kwargs) + '</b>'
+#     return wrapper
+#
+# @bold
+# def greet(name):
+#     '''Function greet user.'''
+#     return f'Hello {name}!'
+#
+# print(greet.__name__)
+# print(greet.__doc__)
+
+
 # замыкание — это особый вид функции. Она определена в теле другой функции и создаётся каждый раз во время её выполнения
 # def closure():
 #    count = 0
