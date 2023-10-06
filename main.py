@@ -1,5 +1,173 @@
 # import functools
 #
+#
+# class MaxRetriesException(Exception):
+#     pass
+#
+#
+# def retry(times):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in range(times):
+#                 try:
+#                     return func(*args, **kwargs)
+#                 except Exception:
+#                     pass
+#             raise MaxRetriesException()
+#         return wrapper
+#     return decorator
+#
+#
+# @retry(3)
+# def no_way():
+#     raise ValueError
+#
+#
+# try:
+#     no_way()
+# except Exception as e:
+#     print(type(e))
+
+
+# import functools
+#
+#
+# def ignore_exception(*exceptions):
+#     def inner(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             try:
+#                 return func(*args, **kwargs)
+#             except Exception as err:
+#                 if err.__class__ in exceptions:
+#                     print(f'Исключение {err.__class__.__name__} обработано')
+#                 else:
+#                     raise err
+#         return wrapper
+#     return inner
+#
+#
+# @ignore_exception(ValueError, TypeError, ZeroDivisionError, NameError)
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+
+
+# import functools
+#
+#
+# def add_attrs(**kwargs):
+#     def inner(func):
+#         for k, v in kwargs.items():
+#             setattr(func, k, v)
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return inner
+#
+#
+# @add_attrs(attr1='bee', attr2='geek')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek.attr1)
+# print(beegeek.attr2)
+
+
+# import functools
+#
+#
+#
+# def takes(*argss):
+#     def checker(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             f = func(*args, **kwargs)
+#             flag = False
+#             for i in (*args, *kwargs.values()):
+#                 if type(i) in argss:
+#                     flag = True
+#                     return f
+#                 else:
+#                     raise TypeError
+#         return wrapper
+#     return checker
+
+
+# import functools
+#
+#
+# def returns(datatype):
+#     def decor(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             f = func(*args, **kwargs)
+#             if isinstance(f, datatype):
+#                 return f
+#             else:
+#                 raise TypeError
+#         return wrapper
+#     return decor
+
+
+# import functools
+#
+#
+# def repeat(times=1):
+#     def decor(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in range(times):
+#                 f = func(*args, **kwargs)
+#             return f
+#         return wrapper
+#     return decor
+#
+#
+# @repeat(3)
+# def say_beegeek():
+#     '''documentation'''
+#     print('beegeek')
+#
+#
+# say_beegeek()
+
+
+# import functools
+#
+#
+# def make_html(tag):
+#     def inner(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             f = func(*args, **kwargs)
+#             return f'<{tag}>{f}</{tag}>'
+#         return wrapper
+#     return inner
+
+
+# import functools
+#
+# def prefix(string, to_the_end=False):
+#     def decor(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             r = func(*args, **kwargs)
+#             if to_the_end:
+#                 return r + string
+#             else:
+#                 return string + r
+#         return wrapper
+#     return decor
+
+
+# import functools
+#
 # def trace(func):
 #     @functools.wraps(func)
 #     def wrapper(*args, **kwargs):
