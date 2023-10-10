@@ -1,3 +1,35 @@
+# from random import randint
+#
+#
+# def random_numbers(left, right):
+#     rand_num = randint(left, right)
+#     return iter(lambda: rand_num, 'hi')
+
+
+# def get_min_max(iterable):
+#     try:
+#         iterable = iter(iterable)
+#         min_el = next(iterable)
+#         max_el = min_el
+#         for i in iterable:
+#             if i < min_el:
+#                 min_el = i
+#             if i > max_el:
+#                 max_el = i
+#         return (min_el, max_el)
+#     except:
+#         return None
+#
+#
+# data = list(range(1, 101))[::-1]
+#
+# print(get_min_max(data))
+
+
+# def transpose(matrix):
+#     return [list(row) for row in zip(*matrix)]
+
+
 # import functools
 #
 #
