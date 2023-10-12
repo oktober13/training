@@ -1,3 +1,131 @@
+
+
+
+
+
+
+
+
+
+
+
+# class Xrange:
+#     def __init__(self, start, end, step=1):
+#         self.start = start
+#         self.end = end
+#         self.step = step
+#         self.current = self.start
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if (self.step > 0 and self.current < self.end) or (self.step < 0 and self.current > self.end):
+#             result = self.current
+#             self.current += self.step
+#             return result
+#         else:
+#             raise StopIteration
+
+
+
+
+# class Cycle:
+#     def __init__(self, iterable):
+#         self.iterable = iterable
+#         self.index = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.index += 1
+#         if self.index == len(self.iterable):
+#             self.index = 0
+#         return self.iterable[self.index]
+
+
+
+
+
+
+
+# class PowerOf:
+#     def __init__(self, number):
+#         self.number = number
+#         self.degree = -1
+#
+#     def __iter__(self):
+#         return iter
+#
+#     def __next__(self):
+#         self.degree += 1
+#         return self.number ** self.degree
+
+
+
+
+
+
+
+
+# class Fibonacci:
+#     def __init__(self):
+#         self.n1 = 0
+#         self.n2 = 1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.n1, self.n2 = self.n2, self.n1 + self.n2
+#         return self.n1
+#
+# fibonacci = Fibonacci()
+#
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+
+
+
+
+# class BoundedRepeater:
+#     def __init__(self, obj, times):
+#         self.obj = obj
+#         self.times = times
+#         self.index = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.index += 1
+#         if self.index == self.times:
+#             raise StopIteration
+#         return self.obj
+#
+#
+# geek = BoundedRepeater('geek', 3)
+#
+# print(next(geek))
+# print(next(geek))
+# print(next(geek))
+#
+# try:
+#     print(next(geek))
+# except StopIteration:
+#     print('Error')
+
+
+
+
+
+
+
+
 # from random import randint
 #
 #
