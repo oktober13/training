@@ -5,6 +5,28 @@
 
 
 
+# def flatten(nested_list):
+#     for i in nested_list:
+#         if isinstance(i, list):
+#             yield from flatten(i)
+#         else:
+#             yield i
+#
+#
+# generator = flatten([[1, 2], [[3]], [[4], 5]])
+#
+# print(*generator)
+
+
+
+
+# def palindromes():
+#     n = 0
+#     while True:
+#         n += 1
+#         if str(n) == str(n)[::-1]:
+#             yield n
+
 
 
 
