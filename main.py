@@ -1,7 +1,3 @@
-
-
-
-
 # def stop_on(iterable, obj):
 #     it = iter(iterable)
 #     return iter(lambda: next(it), obj)
@@ -21,17 +17,12 @@
 # print(*generator)
 
 
-
-
 # def palindromes():
 #     n = 0
 #     while True:
 #         n += 1
 #         if str(n) == str(n)[::-1]:
 #             yield n
-
-
-
 
 
 # class Xrange:
@@ -53,8 +44,6 @@
 #             raise StopIteration
 
 
-
-
 # class Cycle:
 #     def __init__(self, iterable):
 #         self.iterable = iterable
@@ -70,11 +59,6 @@
 #         return self.iterable[self.index]
 
 
-
-
-
-
-
 # class PowerOf:
 #     def __init__(self, number):
 #         self.number = number
@@ -86,12 +70,6 @@
 #     def __next__(self):
 #         self.degree += 1
 #         return self.number ** self.degree
-
-
-
-
-
-
 
 
 # class Fibonacci:
@@ -113,8 +91,6 @@
 # print(next(fibonacci))
 # print(next(fibonacci))
 # print(next(fibonacci))
-
-
 
 
 # class BoundedRepeater:
@@ -143,12 +119,6 @@
 #     print(next(geek))
 # except StopIteration:
 #     print('Error')
-
-
-
-
-
-
 
 
 # from random import randint
