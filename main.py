@@ -1,3 +1,29 @@
+# import itertools
+#
+# def roundrobin(*args):
+#     iterators = [iter(arg) for arg in args]
+#     return (i for a in itertools.zip_longest(*iterators, fillvalue='') for i in a if i != '')
+#
+# print(*roundrobin('abc', 'd', 'ef'))
+# print(*roundrobin([1, 2, 3], iter('beegeek')))
+# print(list(roundrobin()))
+
+
+
+
+# import itertools as it
+# import time
+#
+# symbols = ['.', '-', "'", '"', "'", '-', '.', '_']
+#
+# for c in it.cycle(symbols):
+#     print(c, end='')
+#     time.sleep(0.05)
+
+
+
+
+
 # def stop_on(iterable, obj):
 #     it = iter(iterable)
 #     return iter(lambda: next(it), obj)
