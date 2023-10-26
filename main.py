@@ -1,3 +1,58 @@
+
+
+
+
+
+
+
+
+
+# from itertools import zip_longest
+#
+# def grouper(iterable, n, fillvalue=None):
+#     args = [iter(iterable)] * n
+#     return zip_longest(*args, fillvalue=fillvalue)
+#
+#
+# iterator = iter([1, 2, 3, 4, 5, 6, 7])
+#
+# print(*grouper(iterator, 3))
+
+
+
+
+
+
+
+# from itertools import tee, chain
+#
+# def ncycles(iterable, times=1):
+#     tee_object = tee(iterable, times)
+#     for i in chain.from_iterable(tee_object):
+#         yield i
+#
+#
+# iterator = iter('bee')
+#
+# print(*ncycles(iterator, 4))
+
+
+
+
+
+
+
+# from itertools import pairwise, starmap
+#
+# def max_pair(iterable):
+#     pairwise_object = pairwise(iterable)
+#     res = starmap(lambda x, y: x + y, pairwise_object)
+#     return max(res)
+
+
+
+
+
 # import itertools
 #
 # def roundrobin(*args):
