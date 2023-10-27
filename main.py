@@ -5,8 +5,6 @@
 
 
 
-
-
 # from itertools import zip_longest
 #
 # def grouper(iterable, n, fillvalue=None):
