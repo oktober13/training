@@ -1,8 +1,4 @@
-
-
-
-
-
+# Learning module itertools
 
 
 # from itertools import zip_longest
@@ -15,11 +11,6 @@
 # iterator = iter([1, 2, 3, 4, 5, 6, 7])
 #
 # print(*grouper(iterator, 3))
-
-
-
-
-
 
 
 # from itertools import tee, chain
@@ -35,20 +26,12 @@
 # print(*ncycles(iterator, 4))
 
 
-
-
-
-
-
 # from itertools import pairwise, starmap
 #
 # def max_pair(iterable):
 #     pairwise_object = pairwise(iterable)
 #     res = starmap(lambda x, y: x + y, pairwise_object)
 #     return max(res)
-
-
-
 
 
 # import itertools
@@ -62,8 +45,6 @@
 # print(list(roundrobin()))
 
 
-
-
 # import itertools as it
 # import time
 #
@@ -74,13 +55,9 @@
 #     time.sleep(0.05)
 
 
-
-
-
 # def stop_on(iterable, obj):
 #     it = iter(iterable)
 #     return iter(lambda: next(it), obj)
-
 
 
 # def flatten(nested_list):
