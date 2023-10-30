@@ -1,4 +1,87 @@
-# Learning module itertools
+
+
+
+
+# from itertools import permutations
+#
+# numbers = [1, 2, 3, 4]
+# letters = 'cba'
+#
+# all_num_permutations = permutations(numbers)
+# all_let_permutations = permutations(letters)
+#
+# print(list(all_num_permutations))
+# print(list(all_let_permutations))
+
+
+
+# from itertools import groupby
+#
+# def group_anagrams(words: list) -> list:
+#     words_sorted = sorted(words, key=lambda x: sorted(list(x)))
+#     g = groupby(words_sorted, key=lambda x: sorted(list(x)))
+#     s = []
+#     for key, val in g:
+#         s.append(tuple(val))
+#     return s
+#
+# groups = group_anagrams(['evil', 'father', 'live', 'levi', 'book', 'afther', 'boko'])
+#
+# print(*groups)
+
+
+
+
+
+
+# from itertools import groupby
+#
+# tasks = [('Отдых', 'поспать днем', 3),
+#         ('Ответы на вопросы', 'ответить на вопросы в дискорде', 1),
+#         ('ЕГЭ Математика', 'доделать курс по параметрам', 1),
+#         ('Ответы на вопросы', 'ответить на вопросы в курсах', 2),
+#         ('Отдых', 'погулять вечером', 4),
+#         ('Курс по ооп', 'обсудить темы', 1),
+#         ('Урок по groupby', 'добавить задачи на программирование', 3),
+#         ('Урок по groupby', 'написать конспект', 1),
+#         ('Отдых', 'погулять днем', 2),
+#         ('Урок по groupby', 'добавить тестовые задачи', 2),
+#         ('Уборка', 'убраться в ванной', 2),
+#         ('Уборка', 'убраться в комнате', 1),
+#         ('Уборка', 'убраться на кухне', 3),
+#         ('Отдых', 'погулять утром', 1),
+#         ('Курс по ооп', 'обсудить задачи', 2)]
+#
+# s = sorted(sorted(tasks, key=lambda x: x[-1]), key=lambda x: x[0])
+# g = groupby(s, key=lambda x: x[0])
+# for key, val in g:
+#     print(f'{key}:')
+#     for i in val:
+#         print(f'    {i[-1]}. {i[-2]}')
+#     print()
+
+
+
+
+
+
+
+
+
+
+# from itertools import groupby
+#
+# s = sorted(input().split(), key=len)
+# g = groupby(s, key=len)
+# for key, val in g:
+#     print(f'{key} -> {", ".join(sorted(list(val)))}')
+
+
+
+
+
+
+
 
 
 # from itertools import zip_longest
