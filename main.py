@@ -2,6 +2,44 @@
 
 
 
+
+# from collections import namedtuple
+# import itertools
+#
+# Item = namedtuple('Item', ['name', 'mass', 'price'])
+#
+# items = [Item('Обручальное кольцо', 7, 49_000),
+#          Item('Мобильный телефон', 200, 110_000),
+#          Item('Ноутбук', 2000, 150_000),
+#          Item('Ручка Паркер', 20, 37_000),
+#          Item('Статуэтка Оскар', 4000, 28_000),
+#          Item('Наушники', 150, 11_000),
+#          Item('Гитара', 1500, 32_000),
+#          Item('Золотая монета', 8, 140_000),
+#          Item('Фотоаппарат', 720, 79_000),
+#          Item('Лимитированные кроссовки', 300, 80_000)]
+#
+# def bag(power_mass):
+#     cur_tuple = None
+#     cur_power_price = 0
+#     m = all(map(lambda x: x.mass > power_mass, items))
+#     if m:
+#         return ['Рюкзак собрать не удастся']
+#
+#     for n in range(1, len(items) + 1):
+#         for i in itertools.combinations(items, n):
+#             if sum(j.mass for j in i) <= power_mass and sum(j.price for j in i) > cur_power_price:
+#                 cur_power_mass = sum(j.mass for j in i)
+#                 cur_tuple = [k.name for k in i]
+#                 cur_power_price = sum(j.price for j in i)
+#     return sorted(cur_tuple)
+#
+# print(*bag(int(input())), sep='\n')
+
+
+
+
+
 # from itertools import permutations
 #
 # numbers = [1, 2, 3, 4]
