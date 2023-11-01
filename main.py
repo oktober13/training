@@ -1,3 +1,38 @@
+# import itertools as it
+# from string import ascii_uppercase, digits
+#
+# n, m = int(input()), int(input())
+# symbols = (digits + ascii_uppercase)[:n]
+#
+# print(*map("".join, it.product(symbols, repeat=m)))
+
+
+
+
+
+
+# from string import ascii_lowercase
+# from itertools import product
+#
+# letters = ascii_lowercase[:8]
+# digits = [1, 2, 3, 4, 5, 6, 7, 8]
+#
+# for i in product(letters, digits):
+#     print(*i, sep='', end=' ')
+
+
+
+
+
+
+
+
+# from itertools import product
+#
+# for time in product(range(24), range(60), range(60)):
+#     print(*time, sep=' : ')
+
+
 
 
 
