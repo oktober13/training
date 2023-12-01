@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+
+
+# import re
+# import sys
+#
+#
+# pattern = r'_\d+[A-Za-z]*_?'
+# data = [text.strip() for text in sys.stdin]
+# for i in data:
+#     if re.fullmatch(pattern, i):
+#         print(True)
+#     else:
+#         print(False)
+
+
+
+
 # import itertools as it
 # from string import ascii_uppercase, digits
 #
