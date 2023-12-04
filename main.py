@@ -1,3 +1,69 @@
+
+
+
+
+
+# import re
+# import sys
+#
+# data = [s.strip() for s in sys.stdin]
+# pattern = r'beegeek'
+#
+# count = 0
+#
+# for i in data:
+#     if re.search(pattern, i, flags=re.IGNORECASE):
+#         count += 1
+#
+# print(count)
+
+
+
+
+
+
+
+# import re
+# import sys
+#
+# pattern1 = r'^(beegeek).*(beegeek)$'
+# pattern2 = r'^beegeek|beegeek$'
+# pattern3 = r'.+beegeek.+'
+#
+# data = [word.strip() for word in sys.stdin]
+# power = 0
+#
+# for string in data:
+#     if re.search(pattern1, string):
+#         power += 3
+#     elif re.search(pattern2, string):
+#         power += 2
+#     elif re.search(pattern3, string):
+#         power += 1
+#
+# print(power)
+
+
+
+
+
+# import re
+# import sys
+#
+# pattern1 = r'((bee).*){2,}'
+# pattern2 = r'\bgeek\b'
+#
+# data = [word.strip() for word in sys.stdin]
+# match1 = [re.search(pattern1, word).group() for word in data if re.search(pattern1, word)]
+# match2 = [re.search(pattern2, word).group() for word in data if re.search(pattern2, word)]
+#
+# print(len(match1))
+# print(len(match2))
+
+
+
+
+
 # {n}	ровно n повторений
 # {m,n}	от m до n повторений включительно
 # {m,}	не менее m повторений
@@ -27,8 +93,7 @@
 
 
 
-=======
->>>>>>> 45bc55cef4d761e23c8cf364740c2124d8d6fc55
+
 # import itertools as it
 # from string import ascii_uppercase, digits
 #
