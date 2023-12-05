@@ -3,6 +3,75 @@
 
 
 
+
+
+
+
+
+
+
+
+# import re
+# import sys
+#
+#
+# def extract_attributes(html_fragment):
+#     tags_attributes = {}
+#
+#     tag_pattern = re.compile(r'<([^\s>/]+)(.*?)>')
+#     matches = re.finditer(tag_pattern, html_fragment)
+#
+#     for match in matches:
+#         tag = match.group(1)
+#         attributes_str = match.group(2)
+#
+#         attribute_pattern = re.compile(r'(\S+?)\s*=\s*["\'](.*?)["\']')
+#         attribute_matches = re.finditer(attribute_pattern, attributes_str)
+#
+#         attributes = [match.group(1) for match in attribute_matches]
+#
+#         tags_attributes[tag] = attributes
+#
+#     return tags_attributes
+#
+#
+# if __name__ == "__main__":
+#     html_fragment = sys.stdin.read()
+#
+#     tags_attributes = extract_attributes(html_fragment)
+#
+#     for tag, attributes in sorted(tags_attributes.items()):
+#         print(f"{tag}: {', '.join(sorted(attributes))}")
+
+
+
+
+
+
+
+# import re
+#
+#
+# def abbreviate(phrase):
+#     pattern = r'(\b[A-Za-z]|[A-Z])'
+#     match1 = re.findall(pattern, phrase)
+#     return ''.join(match1).upper()
+#
+#
+# print(abbreviate('javaScript object notation'))
+# print(abbreviate('frequently asked questions'))
+# print(abbreviate('JS game sec'))
+
+
+
+
+
+
+
+
+
+
+
 # import re
 # import sys
 #
