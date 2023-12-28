@@ -6,6 +6,32 @@
 
 
 
+# import re
+#
+#
+# def mixer_two_symbol(word):
+#     cur_word = word.group(0)
+#     if len(cur_word) > 2:
+#         return cur_word[:2][::-1] + cur_word[2:]
+#     else:
+#         return cur_word[::-1]
+#
+#
+# pattern = '\w{2,}'
+#
+# match1 = re.sub(pattern, mixer_two_symbol, input())
+# print(match1)
+#
+
+
+
+
+
+
+
+
+
+
 
 
 
